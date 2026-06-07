@@ -50,9 +50,14 @@ const About = () => {
             <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-purple-500 via-fuchsia-500 to-cyan-500" />
             <Rocket className="w-12 h-12 text-purple-400 mb-4" />
             <h3 className="text-2xl md:text-3xl font-orbitron font-bold mb-4">Our <span className="text-purple-400">Mission</span></h3>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               To make robotics accessible to every student — regardless of background or experience. Through hands-on building, mentorship, and community engagement, we inspire the innovators of tomorrow and prove that anyone can be an engineer.
             </p>
+            <img 
+              src="/team-photos/team-group.png" 
+              alt="QBIT Team" 
+              className="w-full rounded-lg border border-white/[0.06] object-cover max-h-64"
+            />
           </div>
         </motion.div>
 

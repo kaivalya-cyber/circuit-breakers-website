@@ -2,28 +2,24 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, ZoomIn, Camera } from "lucide-react";
 
-const images = Array.from({ length: 16 }, (_, i) => ({
-  src: `/portfolio/${i + 1}.png`,
-  alt: `Portfolio Image ${i + 1}`,
-  caption: [
-    "Team photo at the regional championship",
-    "Robot design brainstorming session",
-    "Programming the autonomous routine",
-    "Pit setup at state competition",
-    "CAD model of our drivetrain",
-    "Testing the intake mechanism",
-    "Alliance partners celebrating a win",
-    "Our custom 3D-printed parts",
-    "Sensor calibration during practice",
-    "Team huddle before a match",
-    "Wiring the control system",
-    "Field testing our new arm design",
-    "Engineering notebook documentation",
-    "Community STEM outreach event",
-    "Robot reveal day",
-    "Season wrap-up celebration",
-  ][i],
-}));
+const images = [
+  { src: "/team-photos/group1.jpg", alt: "Team at competition", caption: "QBIT at an FTC qualifier tournament" },
+  { src: "/team-photos/group2.jpg", alt: "Team building session", caption: "Building and testing the robot" },
+  { src: "/team-photos/group3.jpg", alt: "Practice session", caption: "Preparing for match day" },
+  { src: "/team-photos/group4.png", alt: "Team outreach", caption: "Community STEM demo event" },
+  { src: "/team-photos/team-group.png", alt: "Full team photo", caption: "QBIT #23642 — the whole crew" },
+  { src: "/team-photos/member1.jpg", alt: "Team member", caption: "Robot driver in action" },
+  { src: "/team-photos/member2.png", alt: "Team member", caption: "Working on the engineering notebook" },
+  { src: "/team-photos/member3.png", alt: "Team member", caption: "Fine-tuning the intake mechanism" },
+  { src: "/team-photos/member4.png", alt: "Team member", caption: "Programming autonomous routines" },
+  { src: "/team-photos/member5.png", alt: "Team member", caption: "CAD design session" },
+  { src: "/team-photos/member6.png", alt: "Team member", caption: "Wiring and electronics" },
+  { src: "/team-photos/member7.png", alt: "Team member", caption: "Pit crew prep before a match" },
+  { src: "/team-photos/member8.png", alt: "Team member", caption: "Testing sensors on the field" },
+  { src: "/portfolio/1.png", alt: "Portfolio page", caption: "Engineering portfolio — team overview" },
+  { src: "/portfolio/2.png", alt: "Portfolio page", caption: "Engineering portfolio — robot design" },
+  { src: "/portfolio/3.png", alt: "Portfolio page", caption: "Engineering portfolio — outreach impact" },
+];
 
 const Gallery = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
