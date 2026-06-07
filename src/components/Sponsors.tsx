@@ -29,7 +29,7 @@ const sponsors = [
   {
     name: "Caltech",
     tier: "Silver",
-    logo: "/sponsors/caltech-logo.svg",
+    logo: "/sponsors/caltech-logo.png",
     description: "Academic partner — Caltech alumni presented on FIRST's mission and recruited judges for our events.",
   },
   {
