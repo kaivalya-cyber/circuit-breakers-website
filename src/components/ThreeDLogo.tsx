@@ -1,6 +1,6 @@
 import { useRef, useMemo, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Float, MeshDistortMaterial, Environment } from "@react-three/drei";
+import { Float, MeshDistortMaterial, Environment, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 
 const Gear = ({ position, rotation, scale, color, speed }: {
@@ -46,6 +46,32 @@ const Gear = ({ position, rotation, scale, color, speed }: {
         <meshStandardMaterial color={color} metalness={0.8} roughness={0.2} emissive={color} emissiveIntensity={0.3} />
       </mesh>
     </group>
+  );
+};
+
+const LogoDisplay = () => {
+  const texture = useTexture("/team-logo-texture.png");
+  texture.colorSpace = THREE.SRGBColorSpace;
+  texture.minFilter = THREE.LinearFilter;
+  texture.magFilter = THREE.LinearFilter;
+  
+  return (
+    <Float speed={1.5} rotationIntensity={0.15} floatIntensity={0.4}>
+      <mesh position={[0, 0.5, 0]}>
+        <planeGeometry args={[1.6, 1.6]} />
+        <meshStandardMaterial 
+          map={texture} 
+          transparent 
+          opacity={0.95}
+          emissive="#ffffff" 
+          emissiveIntensity={0.15}
+          emissiveMap={texture}
+          roughness={0.4}
+          metalness={0.1}
+          side={THREE.DoubleSide}
+        />
+      </mesh>
+    </Float>
   );
 };
 
@@ -127,6 +153,7 @@ const LogoModel = () => (
     <pointLight position={[-5, -2, -3]} intensity={1} color="#c020b0" />
     <pointLight position={[0, 3, -5]} intensity={0.8} color="#00bcd4" />
     <spotLight position={[0, 5, 0]} intensity={0.5} angle={0.5} penumbra={0.5} color="#ffffff" />
+    <LogoDisplay />
     <CoreShield />
     <OrbitingRings />
     <Particles />

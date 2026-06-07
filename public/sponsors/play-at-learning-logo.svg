@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <rect width="200" height="80" rx="8" fill="#2E86AB" opacity="0.95"/>
+  <rect x="2" y="2" width="196" height="76" rx="7" fill="none" stroke="#F6F5AE" stroke-width="1" opacity="0.3"/>
+  <text x="100" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">Play At Learning</text>
+  <text x="100" y="54" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="500" fill="#F6F5AE" text-anchor="middle" opacity="0.9">Community Partner</text>
+</svg>
