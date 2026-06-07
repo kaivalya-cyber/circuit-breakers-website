@@ -174,9 +174,18 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="h-[400px] md:h-[500px] lg:h-[600px]"
+            className="h-[400px] md:h-[500px] lg:h-[600px] relative"
           >
             <ThreeDLogo />
+            <motion.img 
+              src="/team-logo.png" 
+              alt="QBIT Team Logo"
+              className="absolute top-4 right-4 w-16 h-16 md:w-20 md:h-20 object-contain rounded-xl bg-background/60 backdrop-blur-sm border border-white/[0.08] p-1.5 shadow-[0_0_30px_rgba(139,31,176,0.3)]"
+              initial={{ opacity: 0, scale: 0, rotate: -20 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ delay: 1.2, duration: 0.6, type: "spring", stiffness: 200 }}
+              whileHover={{ scale: 1.1, rotate: 5, boxShadow: "0 0 40px rgba(192,32,176,0.5)" }}
+            />
           </motion.div>
         </div>
       </div>

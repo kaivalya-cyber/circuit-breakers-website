@@ -20,7 +20,7 @@ const tierStyles: Record<string, string> = {
 const Sponsors = () => {
   return (
     <section id="sponsors" className="section-padding relative bg-white/[0.01]">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/3 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-500/3 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
@@ -53,7 +53,7 @@ const Sponsors = () => {
               transition={{ delay: i * 0.08, duration: 0.5 }}
             >
               <div className="glass-card p-6 text-center h-full card-hover group">
-                <div className="w-20 h-20 mx-auto mb-4 rounded-xl bg-white/[0.02] border border-white/[0.06] flex items-center justify-center overflow-hidden group-hover:border-red-500/30 transition-all duration-300">
+                <div className="w-20 h-20 mx-auto mb-4 rounded-xl bg-white/[0.02] border border-white/[0.06] flex items-center justify-center overflow-hidden group-hover:border-purple-500/30 transition-all duration-300">
                   <img
                     src={sponsor.logo}
                     alt={sponsor.name}

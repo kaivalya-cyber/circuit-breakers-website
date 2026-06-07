@@ -4,57 +4,57 @@ import { Github, Linkedin, Mail, Code2, Wrench, Cpu, Users } from "lucide-react"
 
 const members = [
   {
-    name: "Reva",
-    role: "Team Captain & Lead Builder",
-    specialty: "mechanical",
-    image: "/team-photos/member1.jpg",
-    bio: "Leads the team with energy and vision. Oversees robot design and mechanical build quality across all subsystems.",
-    skills: ["CAD", "Fabrication", "Leadership", "Design"],
-    social: { github: "#", linkedin: "#", email: "#" },
-  },
-  {
-    name: "Miranda",
-    role: "Lead Programmer",
-    specialty: "code",
-    image: "/team-photos/member2.png",
-    bio: "Writes autonomous and teleop code. Masters of Java and control systems — keeps our robot moving with precision.",
-    skills: ["Java", "Control Systems", "Autonomous", "PID"],
-    social: { github: "#", linkedin: "#", email: "#" },
-  },
-  {
-    name: "Anwia",
-    role: "Electrical & Sensors Lead",
-    specialty: "electrical",
-    image: "/team-photos/member3.png",
-    bio: "Handles all wiring, sensor integration, and power distribution. Built our custom sensor array from scratch.",
-    skills: ["Circuit Design", "Sensors", "Wiring", "Power"],
-    social: { github: "#", linkedin: "#", email: "#" },
-  },
-  {
-    name: "Coach Shuhul",
-    role: "Head Coach & Mentor",
-    specialty: "outreach",
-    image: "/team-photos/member4.png",
-    bio: "Guides the team with technical expertise and strategic vision. The backbone of QBIT's growth and success.",
-    skills: ["Mentoring", "Strategy", "Engineering", "Leadership"],
-    social: { github: "#", linkedin: "#", email: "#" },
-  },
-  {
     name: "Ananya",
-    role: "Outreach & Media Lead",
-    specialty: "media",
+    role: "Team Captain",
+    specialty: "leadership",
     image: "/team-photos/member5.png",
-    bio: "Runs community demos at farmers markets, manages social media, and coordinates our summer camp program.",
-    skills: ["Social Media", "Event Planning", "Photography", "Outreach"],
+    bio: "Leads QBIT with vision and energy. Focused on helping younger members master CAD and CNC using Fusion360 — building both robots and the next generation of engineers.",
+    skills: ["Fusion 360", "CAD", "CNC", "Leadership"],
+    social: { github: "#", linkedin: "#", email: "#" },
+  },
+  {
+    name: "Ameya",
+    role: "Programming Lead",
+    specialty: "code",
+    image: "/team-photos/member8.png",
+    bio: "Architects teleop and autonomous code. Pioneering PedroPathing curve generative software and building the smartest robot on the field.",
+    skills: ["Java", "Autonomous", "PedroPathing", "Control Systems"],
     social: { github: "#", linkedin: "#", email: "#" },
   },
   {
     name: "Mahiya",
-    role: "Design & CAD Specialist",
+    role: "Design Lead",
     specialty: "mechanical",
     image: "/team-photos/member6.png",
-    bio: "Creates detailed CAD models and runs simulations. Manages our 3D printing workflow for rapid prototyping.",
-    skills: ["Fusion 360", "3D Printing", "Simulation", "Prototyping"],
+    bio: "Oversees technical build quality — from wiring and drilling to intake mechanisms. Teaches teammates clean, competition-ready robot construction.",
+    skills: ["Fabrication", "Intake Design", "Wiring", "3D Printing"],
+    social: { github: "#", linkedin: "#", email: "#" },
+  },
+  {
+    name: "Anwia",
+    role: "Design Lead",
+    specialty: "electrical",
+    image: "/team-photos/member3.png",
+    bio: "Designed and built QBIT's turret and shooting mechanism with integrated color sensors. Hands-on builder who turns ideas into competition hardware.",
+    skills: ["Turret Design", "Color Sensors", "Shooting Mech", "Assembly"],
+    social: { github: "#", linkedin: "#", email: "#" },
+  },
+  {
+    name: "Reva",
+    role: "Design Team",
+    specialty: "mechanical",
+    image: "/team-photos/member1.jpg",
+    bio: "Learning STEM skills across disciplines — shadows teammates in outreach, design, and CAD while building hands-on engineering experience.",
+    skills: ["CAD", "Outreach", "Design", "STEM Learning"],
+    social: { github: "#", linkedin: "#", email: "#" },
+  },
+  {
+    name: "Miranda",
+    role: "Outreach Team",
+    specialty: "outreach",
+    image: "/team-photos/member2.png",
+    bio: "Drives community engagement and events. Learning CNC machining while representing QBIT at farmers markets, summer camps, and qualifier events.",
+    skills: ["Event Planning", "CNC", "Public Speaking", "Media"],
     social: { github: "#", linkedin: "#", email: "#" },
   },
   {
@@ -62,17 +62,17 @@ const members = [
     role: "Software Developer",
     specialty: "code",
     image: "/team-photos/member7.png",
-    bio: "Develops computer vision pipelines and dashboard systems. Optimizes our autonomous path planning algorithms.",
+    bio: "Develops computer vision pipelines and dashboard systems. Optimizes autonomous path planning and builds the team's digital infrastructure.",
     skills: ["Python", "OpenCV", "Path Planning", "React"],
     social: { github: "#", linkedin: "#", email: "#" },
   },
   {
-    name: "Ameya",
-    role: "Build & Testing Lead",
-    specialty: "mechanical",
-    image: "/team-photos/member8.png",
-    bio: "Leads robot assembly and field testing. Ensures every mechanism is competition-ready and reliable under pressure.",
-    skills: ["Assembly", "Testing", "Troubleshooting", "Pit Crew"],
+    name: "Coach Shuhul",
+    role: "Head Coach & Mentor",
+    specialty: "leadership",
+    image: "/team-photos/member4.png",
+    bio: "Guides the team with technical expertise and strategic vision. The backbone of QBIT's growth — from rookie season to hosting qualifiers.",
+    skills: ["Mentoring", "Strategy", "Engineering", "Leadership"],
     social: { github: "#", linkedin: "#", email: "#" },
   },
 ];
@@ -82,11 +82,11 @@ const specialtyColors: Record<string, string> = {
   mechanical: "bg-purple-500/10 border-purple-500/30 text-purple-400",
   electrical: "bg-fuchsia-500/10 border-fuchsia-500/30 text-fuchsia-400",
   outreach: "bg-teal-500/10 border-teal-500/30 text-teal-400",
-  media: "bg-violet-500/10 border-violet-500/30 text-violet-400",
+  leadership: "bg-amber-500/10 border-amber-500/30 text-amber-400",
 };
 
 const specialtyIcons: Record<string, React.ElementType> = {
-  code: Code2, mechanical: Wrench, electrical: Cpu, outreach: Users, media: Users,
+  code: Code2, mechanical: Wrench, electrical: Cpu, outreach: Users, leadership: Users,
 };
 
 const TeamMembers = () => {
@@ -111,7 +111,7 @@ const TeamMembers = () => {
           </h2>
           <div className="divider-glow mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Eight builders, coders, and dreamers — plus Coach Shuhul — united by a passion for robotics and community.
+            Eight builders, coders, and dreamers — led by Captain Ananya and Coach Shuhul — united by a passion for robotics and community.
           </p>
         </motion.div>
 

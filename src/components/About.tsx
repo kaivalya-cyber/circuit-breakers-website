@@ -105,25 +105,53 @@ const About = () => {
         </motion.div>
 
         {/* Timeline */}
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.7 }}>
-          <h3 className="text-2xl md:text-3xl font-orbitron font-bold text-center mb-12">Our <span className="text-fuchsia-400">Journey</span></h3>
+        <motion.div 
+          initial={{ opacity: 0 }} 
+          whileInView={{ opacity: 1 }} 
+          viewport={{ once: true, margin: "-150px" }} 
+          transition={{ duration: 0.6 }}
+        >
+          <h3 className="text-2xl md:text-3xl font-orbitron font-bold text-center mb-12">
+            Our <span className="gradient-text-blue">Journey</span>
+          </h3>
           <div className="relative max-w-3xl mx-auto">
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-purple-500 via-fuchsia-500 to-cyan-500 md:-translate-x-px" />
+            {/* Animated timeline line */}
+            <motion.div 
+              className="absolute left-4 md:left-1/2 top-0 w-px md:-translate-x-px bg-gradient-to-b from-purple-500 via-fuchsia-500 to-cyan-500"
+              initial={{ height: "0%" }}
+              whileInView={{ height: "100%" }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+            />
             {timeline.map((item, i) => (
               <motion.div
                 key={item.year}
-                initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
+                initial={{ opacity: 0, x: i % 2 === 0 ? -60 : 60 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ delay: 0.1, duration: 0.6 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ delay: 0.2 + i * 0.15, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
                 className={`relative flex items-start gap-6 mb-8 md:mb-12 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
               >
-                <div className="absolute left-[13px] md:left-1/2 w-3.5 h-3.5 rounded-full bg-gradient-to-r from-purple-500 to-fuchsia-500 border-2 border-background md:-translate-x-1/2 z-10 mt-1.5" />
-                <div className={`ml-10 md:ml-0 md:w-[calc(50%-2rem)] ${i % 2 === 0 ? "md:pr-8 md:text-right" : "md:pl-8"}`}>
-                  <span className="font-orbitron text-sm text-purple-400 font-bold">{item.year}</span>
-                  <h4 className="text-lg font-bold mt-1">{item.event}</h4>
-                  <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{item.description}</p>
-                </div>
+                {/* Animated dot with glow */}
+                <motion.div 
+                  className="absolute left-[10px] md:left-1/2 w-5 h-5 rounded-full bg-gradient-to-r from-purple-500 to-fuchsia-500 border-2 border-background md:-translate-x-1/2 z-10 mt-1 shadow-[0_0_20px_rgba(139,31,176,0.6)]"
+                  initial={{ scale: 0, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 + i * 0.15, duration: 0.5, type: "spring", stiffness: 300 }}
+                />
+                {/* Content card */}
+                <motion.div 
+                  className={`ml-10 md:ml-0 md:w-[calc(50%-2rem)] ${i % 2 === 0 ? "md:pr-8 md:text-right" : "md:pl-8"}`}
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="glass-card p-5 hover:border-purple-500/20 transition-all duration-300 hover:shadow-[0_0_25px_rgba(139,31,176,0.1)] group">
+                    <span className="font-orbitron text-sm text-purple-400 font-bold tracking-wider">{item.year}</span>
+                    <h4 className="text-lg font-bold mt-1 group-hover:text-fuchsia-400 transition-colors">{item.event}</h4>
+                    <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{item.description}</p>
+                  </div>
+                </motion.div>
               </motion.div>
             ))}
           </div>

@@ -52,8 +52,8 @@ const Header = () => {
           <button onClick={() => scrollToSection("hero")} className="flex items-center gap-3 group">
             <div className="relative w-10 h-10">
               <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-purple-600 to-fuchsia-500 opacity-80 group-hover:opacity-100 transition-opacity animate-pulse-glow" />
-              <div className="absolute inset-[2px] rounded-md bg-background flex items-center justify-center">
-                <span className="font-orbitron text-sm font-bold gradient-text">Q</span>
+              <div className="absolute inset-[2px] rounded-md bg-background flex items-center justify-center overflow-hidden">
+                <img src="/team-logo.png" alt="QBIT" className="w-full h-full object-contain p-0.5" />
               </div>
             </div>
             <span className="hidden sm:block font-orbitron text-lg font-bold tracking-wider">
