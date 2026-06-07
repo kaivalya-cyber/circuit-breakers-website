@@ -1,0 +1,2 @@
+My portfolio website is a sleek, modern, and fully responsive site built using React, Tailwind CSS, and Vite. It showcases my web development projects, highlights my skills in front-end and back-end technologies, and includes features like a dynamic project gallery, smooth animations, and a contact form. Designed with a futuristic aesthetic inspired by ServiceNow, the site emphasizes clean UI, fast load times, and accessibility across all devices.
+
