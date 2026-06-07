@@ -30,11 +30,11 @@ const About = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-4">Who We Are</span>
+          <span className="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-4">Who We Are</span>
           <h2 className="text-4xl md:text-6xl font-orbitron font-bold mb-6">About <span className="gradient-text">QBIT</span></h2>
           <div className="divider-glow mb-6" />
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            We're <span className="text-purple-400 font-semibold">FTC Team #23642</span> — a community-first robotics team based in San Jose, CA.
+            We're <span className="text-cyan-400 font-semibold">FTC Team #23642</span> — a community-first robotics team based in San Jose, CA.
             We build robots, teach STEM, and create opportunities for the next generation of engineers.
           </p>
         </motion.div>
@@ -47,9 +47,9 @@ const About = () => {
           className="max-w-4xl mx-auto mb-20"
         >
           <div className="glass-card p-8 md:p-12 relative overflow-hidden group hover:border-purple-500/20 transition-all duration-500">
-            <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-purple-500 via-fuchsia-500 to-cyan-500" />
-            <Rocket className="w-12 h-12 text-purple-400 mb-4" />
-            <h3 className="text-2xl md:text-3xl font-orbitron font-bold mb-4">Our <span className="text-purple-400">Mission</span></h3>
+            <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-cyan-500 via-fuchsia-500 to-violet-500" />
+            <Rocket className="w-12 h-12 text-cyan-400 mb-4" />
+            <h3 className="text-2xl md:text-3xl font-orbitron font-bold mb-4">Our <span className="text-cyan-400">Mission</span></h3>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               To make robotics accessible to every student — regardless of background or experience. Through hands-on building, mentorship, and community engagement, we inspire the innovators of tomorrow and prove that anyone can be an engineer.
             </p>
@@ -66,7 +66,7 @@ const About = () => {
             <motion.div key={value.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ delay: i * 0.1, duration: 0.6 }}>
               <div className="glass-card p-6 h-full card-hover group">
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500/20 to-fuchsia-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <value.icon className="w-6 h-6 text-purple-400" />
+                  <value.icon className="w-6 h-6 text-cyan-400" />
                 </div>
                 <h4 className="text-lg font-bold mb-2">{value.title}</h4>
                 <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
@@ -93,7 +93,7 @@ const About = () => {
               <motion.div key={item.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15, duration: 0.5 }}>
                 <div className="glass-card p-6 h-full card-hover text-center">
                   <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mx-auto mb-3">
-                    <item.icon className="w-6 h-6 text-purple-400" />
+                    <item.icon className="w-6 h-6 text-cyan-400" />
                   </div>
                   <div className="text-lg font-orbitron font-bold text-fuchsia-400 mb-1">{item.stat}</div>
                   <h4 className="font-bold mb-2">{item.title}</h4>
@@ -117,7 +117,7 @@ const About = () => {
           <div className="relative max-w-3xl mx-auto">
             {/* Animated timeline line */}
             <motion.div 
-              className="absolute left-4 md:left-1/2 top-0 w-px md:-translate-x-px bg-gradient-to-b from-purple-500 via-fuchsia-500 to-cyan-500"
+              className="absolute left-4 md:left-1/2 top-0 w-px md:-translate-x-px bg-gradient-to-b from-cyan-500 via-fuchsia-500 to-violet-500"
               initial={{ height: "0%" }}
               whileInView={{ height: "100%" }}
               viewport={{ once: true, amount: 0.2 }}
@@ -134,7 +134,7 @@ const About = () => {
               >
                 {/* Animated dot with glow */}
                 <motion.div 
-                  className="absolute left-[10px] md:left-1/2 w-5 h-5 rounded-full bg-gradient-to-r from-purple-500 to-fuchsia-500 border-2 border-background md:-translate-x-1/2 z-10 mt-1 shadow-[0_0_20px_rgba(139,31,176,0.6)]"
+                  className="absolute left-[10px] md:left-1/2 w-5 h-5 rounded-full bg-gradient-to-r from-cyan-500 to-fuchsia-500 border-2 border-background md:-translate-x-1/2 z-10 mt-1 shadow-[0_0_20px_rgba(139,31,176,0.6)]"
                   initial={{ scale: 0, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true, amount: 0.3 }}
@@ -147,7 +147,7 @@ const About = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <div className="glass-card p-5 hover:border-purple-500/20 transition-all duration-300 hover:shadow-[0_0_25px_rgba(139,31,176,0.1)] group">
-                    <span className="font-orbitron text-sm text-purple-400 font-bold tracking-wider">{item.year}</span>
+                    <span className="font-orbitron text-sm text-cyan-400 font-bold tracking-wider">{item.year}</span>
                     <h4 className="text-lg font-bold mt-1 group-hover:text-fuchsia-400 transition-colors">{item.event}</h4>
                     <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{item.description}</p>
                   </div>

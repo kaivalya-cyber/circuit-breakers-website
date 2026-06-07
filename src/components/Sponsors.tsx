@@ -146,7 +146,7 @@ const Sponsors = () => {
               ].map((mentor) => (
                 <span
                   key={mentor.name}
-                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-purple-500/5 border border-purple-500/10 text-xs text-muted-foreground hover:border-purple-500/30 hover:text-purple-400 transition-all duration-300"
+                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-cyan-500/5 border border-cyan-500/10 text-xs text-muted-foreground hover:border-cyan-500/30 hover:text-cyan-400 transition-all duration-300"
                 >
                   {mentor.name}
                   <span className="text-[10px] opacity-50">· {mentor.role}</span>
@@ -172,7 +172,7 @@ const Sponsors = () => {
             </p>
             <button
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-fuchsia-600 hover:from-purple-700 hover:to-fuchsia-700 text-white font-semibold transition-all duration-300 hover:shadow-[0_0_30px_rgba(139,31,176,0.4)]"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-cyan-500 to-fuchsia-500 hover:from-cyan-400 hover:to-fuchsia-400 text-background font-semibold transition-all duration-300 hover:shadow-[0_0_30px_hsl(187,100%,50%,0.5)]"
             >
               Sponsor Us
               <ExternalLink className="w-4 h-4" />

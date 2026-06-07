@@ -15,7 +15,7 @@ const Hero = () => {
     canvas.height = window.innerHeight;
 
     const particles: { x: number; y: number; vx: number; vy: number; size: number; color: string }[] = [];
-    const colors = ["#8b1fb0", "#c020b0", "#00bcd4", "#8b1fb088", "#c020b088"];
+    const colors = ["#00f0ff", "#ff00ff", "#a020f0", "#00f0ff88", "#ff00ff88"];
 
     for (let i = 0; i < 80; i++) {
       particles.push({
@@ -58,7 +58,7 @@ const Hero = () => {
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);
-          ctx.strokeStyle = `rgba(139, 31, 176, ${0.15 * (1 - dist / 180)})`;
+          ctx.strokeStyle = `hsla(187, 100%, 50%, ${0.15 * (1 - dist / 180)})`;
           ctx.lineWidth = 0.5;
           ctx.stroke();
         }
@@ -83,17 +83,17 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden scan-lines">
       <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none" />
       <div className="absolute inset-0 mesh-bg" />
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-[0.03]">
-        <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-purple-500 to-transparent animate-[scan-line_4s_linear_infinite]" />
+        <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-[scan-line_4s_linear_infinite]" />
       </div>
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(139,31,176,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(139,31,176,0.3) 1px, transparent 1px)",
+            "linear-gradient(hsla(187,100%,50%,0.15) 1px, transparent 1px), linear-gradient(90deg, hsla(187,100%,50%,0.15) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
         }}
       />
@@ -111,8 +111,8 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium">
-                <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium">
+                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
                 FIRST Tech Challenge
               </span>
             </motion.div>
@@ -153,17 +153,17 @@ const Hero = () => {
             >
               <button
                 onClick={() => document.getElementById("team")?.scrollIntoView({ behavior: "smooth" })}
-                className="group relative px-8 py-3.5 rounded-lg bg-gradient-to-r from-purple-600 to-fuchsia-600 hover:from-purple-700 hover:to-fuchsia-700 text-white font-semibold text-lg transition-all duration-300 hover:shadow-[0_0_40px_rgba(139,31,176,0.4)] overflow-hidden"
+                className="group relative px-8 py-3.5 rounded-lg bg-gradient-to-r from-cyan-500 to-fuchsia-500 hover:from-cyan-400 hover:to-fuchsia-400 text-background font-semibold text-lg transition-all duration-300 hover:shadow-[0_0_40px_hsl(187,100%,50%,0.5)] overflow-hidden"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   Meet The Team
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity animate-shimmer" />
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-300 to-fuchsia-300 opacity-0 group-hover:opacity-100 transition-opacity animate-shimmer" />
               </button>
               <button
                 onClick={() => document.getElementById("achievements")?.scrollIntoView({ behavior: "smooth" })}
-                className="px-8 py-3.5 rounded-lg border border-white/10 hover:border-purple-500/50 text-foreground font-semibold text-lg transition-all duration-300 hover:bg-purple-500/5 hover:shadow-[0_0_30px_rgba(139,31,176,0.1)]"
+                className="px-8 py-3.5 rounded-lg border border-white/10 hover:border-cyan-400/50 text-foreground font-semibold text-lg transition-all duration-300 hover:bg-cyan-500/5 hover:shadow-[0_0_30px_hsl(187,100%,50%,0.15)]"
               >
                 Our Achievements
               </button>
@@ -180,11 +180,11 @@ const Hero = () => {
             <motion.img 
               src="/team-logo.png" 
               alt="QBIT Team Logo"
-              className="absolute top-4 right-4 w-16 h-16 md:w-20 md:h-20 object-contain rounded-xl bg-background/60 backdrop-blur-sm border border-white/[0.08] p-1.5 shadow-[0_0_30px_rgba(139,31,176,0.3)]"
+              className="absolute top-4 right-4 w-16 h-16 md:w-20 md:h-20 object-contain rounded-xl bg-background/60 backdrop-blur-sm border border-white/[0.08] p-1.5 shadow-[0_0_30px_hsl(187,100%,50%,0.3)]"
               initial={{ opacity: 0, scale: 0, rotate: -20 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ delay: 1.2, duration: 0.6, type: "spring", stiffness: 200 }}
-              whileHover={{ scale: 1.1, rotate: 5, boxShadow: "0 0 40px rgba(192,32,176,0.5)" }}
+              whileHover={{ scale: 1.1, rotate: 5, boxShadow: "0 0 40px hsl(300,100%,50%,0.5)" }}
             />
           </motion.div>
         </div>
@@ -195,7 +195,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hover:text-purple-400 transition-colors group"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hover:text-cyan-400 transition-colors group"
       >
         <span className="text-xs font-medium tracking-widest uppercase">Scroll</span>
         <ArrowDown className="w-5 h-5 animate-bounce group-hover:animate-none group-hover:translate-y-1 transition-transform" />

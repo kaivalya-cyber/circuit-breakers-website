@@ -63,7 +63,7 @@ const Achievements = () => (
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-500/3 rounded-full blur-3xl" />
     <div className="container mx-auto px-6 relative z-10">
       <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.7 }} className="text-center mb-16">
-        <span className="inline-block px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-4">🏆 Achievements</span>
+        <span className="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-4">🏆 Achievements</span>
         <h2 className="text-4xl md:text-6xl font-orbitron font-bold mb-6">Our <span className="gradient-text">Impact</span></h2>
         <div className="divider-glow mb-6" />
       </motion.div>
@@ -102,7 +102,7 @@ const Achievements = () => (
                 <achievement.icon className="w-6 h-6 text-white" />
               </div>
               <span className="text-xs text-muted-foreground">{achievement.subtitle}</span>
-              <h4 className="text-lg font-bold mt-1 mb-2 group-hover:text-purple-400 transition-colors">{achievement.title}</h4>
+              <h4 className="text-lg font-bold mt-1 mb-2 group-hover:text-cyan-400 transition-colors">{achievement.title}</h4>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">{achievement.description}</p>
               <div className="flex gap-4">
                 {achievement.stats.map((stat) => (
@@ -110,7 +110,7 @@ const Achievements = () => (
                 ))}
               </div>
               <div className="mt-4 pt-4 border-t border-white/[0.06]">
-                <span className="inline-flex items-center gap-1 text-xs text-purple-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity">View Details <ChevronRight className="w-3 h-3" /></span>
+                <span className="inline-flex items-center gap-1 text-xs text-cyan-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity">View Details <ChevronRight className="w-3 h-3" /></span>
               </div>
             </div>
           </motion.div>

@@ -103,7 +103,7 @@ const TeamMembers = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-4">
+          <span className="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-4">
             The Crew
           </span>
           <h2 className="text-4xl md:text-6xl font-orbitron font-bold mb-6">
@@ -133,7 +133,7 @@ const TeamMembers = () => {
                   <div className="relative h-56 overflow-hidden">
                     <img src={member.image} alt={member.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-80" />
-                    <div className={`absolute inset-0 bg-gradient-to-t from-purple-500/80 via-purple-500/20 to-transparent flex items-end justify-center pb-4 transition-all duration-300 ${hoveredMember === i ? "opacity-100" : "opacity-0"}`}>
+                    <div className={`absolute inset-0 bg-gradient-to-t from-cyan-500/80 via-cyan-500/20 to-transparent flex items-end justify-center pb-4 transition-all duration-300 ${hoveredMember === i ? "opacity-100" : "opacity-0"}`}>
                       <div className="flex gap-3">
                         <a href={member.social.github} className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/40 transition-colors"><Github className="w-4 h-4 text-white" /></a>
                         <a href={member.social.linkedin} className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/40 transition-colors"><Linkedin className="w-4 h-4 text-white" /></a>
@@ -145,7 +145,7 @@ const TeamMembers = () => {
                     </span>
                   </div>
                   <div className="p-5">
-                    <h3 className="text-lg font-bold group-hover:text-purple-400 transition-colors">{member.name}</h3>
+                    <h3 className="text-lg font-bold group-hover:text-cyan-400 transition-colors">{member.name}</h3>
                     <p className="text-xs text-muted-foreground mt-0.5 mb-3">{member.role}</p>
                     <p className="text-sm text-muted-foreground leading-relaxed mb-3 line-clamp-3">{member.bio}</p>
                     <div className="flex flex-wrap gap-1.5">

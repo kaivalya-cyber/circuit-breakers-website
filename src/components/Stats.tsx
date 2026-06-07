@@ -65,7 +65,7 @@ const Stats = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-4">
+          <span className="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-4">
             📊 By The Numbers
           </span>
           <h2 className="text-4xl md:text-6xl font-orbitron font-bold mb-6">

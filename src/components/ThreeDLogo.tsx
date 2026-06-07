@@ -43,7 +43,7 @@ const Gear = ({ position, rotation, scale, color, speed }: {
     <group position={position} rotation={rotation}>
       <mesh ref={meshRef} scale={scale}>
         <extrudeGeometry args={[shape, extrudeSettings]} />
-        <meshStandardMaterial color={color} metalness={0.8} roughness={0.2} emissive={color} emissiveIntensity={0.3} />
+        <meshStandardMaterial color={color} metalness={0.8} roughness={0.2} emissive={color} emissiveIntensity={0.4} />
       </mesh>
     </group>
   );
@@ -81,12 +81,12 @@ const CoreShield = () => {
       <mesh>
         <octahedronGeometry args={[1.2, 0]} />
         <MeshDistortMaterial
-          color="#8b1fb0" emissive="#8b1fb0" emissiveIntensity={0.4} metalness={0.9} roughness={0.1} distort={0.15} speed={2}
+          color="#00f0ff" emissive="#00f0ff" emissiveIntensity={0.5} metalness={0.9} roughness={0.1} distort={0.15} speed={2}
         />
       </mesh>
       <mesh>
         <octahedronGeometry args={[1.25, 0]} />
-        <meshBasicMaterial color="#c020b0" wireframe transparent opacity={0.15} />
+        <meshBasicMaterial color="#ff00ff" wireframe transparent opacity={0.12} />
       </mesh>
     </Float>
   );
@@ -104,15 +104,15 @@ const OrbitingRings = () => {
     <group ref={groupRef}>
       <mesh rotation={[Math.PI / 2, 0, 0]}>
         <torusGeometry args={[1.8, 0.02, 16, 100]} />
-        <meshStandardMaterial color="#8b1fb0" emissive="#8b1fb0" emissiveIntensity={1} metalness={0.5} roughness={0.3} />
+        <meshStandardMaterial color="#00f0ff" emissive="#00f0ff" emissiveIntensity={1} metalness={0.5} roughness={0.3} />
       </mesh>
       <mesh rotation={[Math.PI / 3, Math.PI / 4, 0]}>
         <torusGeometry args={[2.0, 0.015, 16, 100]} />
-        <meshStandardMaterial color="#c020b0" emissive="#c020b0" emissiveIntensity={1} metalness={0.5} roughness={0.3} />
+        <meshStandardMaterial color="#ff00ff" emissive="#ff00ff" emissiveIntensity={1} metalness={0.5} roughness={0.3} />
       </mesh>
       <mesh rotation={[-Math.PI / 4, -Math.PI / 6, Math.PI / 3]}>
         <torusGeometry args={[2.2, 0.01, 16, 100]} />
-        <meshStandardMaterial color="#00bcd4" emissive="#00bcd4" emissiveIntensity={0.8} metalness={0.5} roughness={0.3} />
+        <meshStandardMaterial color="#a020f0" emissive="#a020f0" emissiveIntensity={0.8} metalness={0.5} roughness={0.3} />
       </mesh>
     </group>
   );
@@ -141,7 +141,7 @@ const Particles = () => {
       <bufferGeometry>
         <bufferAttribute attach="attributes-position" args={[positions, 3]} />
       </bufferGeometry>
-      <pointsMaterial size={0.02} color="#8b1fb0" transparent opacity={0.6} blending={THREE.AdditiveBlending} depthWrite={false} />
+      <pointsMaterial size={0.02} color="#00f0ff" transparent opacity={0.7} blending={THREE.AdditiveBlending} depthWrite={false} />
     </points>
   );
 };
@@ -149,17 +149,17 @@ const Particles = () => {
 const LogoModel = () => (
   <>
     <ambientLight intensity={0.3} />
-    <pointLight position={[5, 5, 5]} intensity={1.5} color="#8b1fb0" />
-    <pointLight position={[-5, -2, -3]} intensity={1} color="#c020b0" />
-    <pointLight position={[0, 3, -5]} intensity={0.8} color="#00bcd4" />
+    <pointLight position={[5, 5, 5]} intensity={1.5} color="#00f0ff" />
+    <pointLight position={[-5, -2, -3]} intensity={1} color="#ff00ff" />
+    <pointLight position={[0, 3, -5]} intensity={0.8} color="#a020f0" />
     <spotLight position={[0, 5, 0]} intensity={0.5} angle={0.5} penumbra={0.5} color="#ffffff" />
     <LogoDisplay />
     <CoreShield />
     <OrbitingRings />
     <Particles />
-    <Gear position={[2.5, 1.5, 0]} rotation={[0, 0, 0.3]} scale={0.6} color="#8b1fb0" speed={0.8} />
-    <Gear position={[-2.8, -0.8, 0.5]} rotation={[0.2, 0.1, -0.3]} scale={0.5} color="#c020b0" speed={-0.6} />
-    <Gear position={[1.5, -2.2, -0.3]} rotation={[0.1, 0.3, 0.6]} scale={0.45} color="#00bcd4" speed={1.0} />
+    <Gear position={[2.5, 1.5, 0]} rotation={[0, 0, 0.3]} scale={0.6} color="#00f0ff" speed={0.8} />
+    <Gear position={[-2.8, -0.8, 0.5]} rotation={[0.2, 0.1, -0.3]} scale={0.5} color="#ff00ff" speed={-0.6} />
+    <Gear position={[1.5, -2.2, -0.3]} rotation={[0.1, 0.3, 0.6]} scale={0.45} color="#a020f0" speed={1.0} />
   </>
 );
 
