@@ -108,7 +108,7 @@ const About = () => {
         <motion.div 
           initial={{ opacity: 0 }} 
           whileInView={{ opacity: 1 }} 
-          viewport={{ once: true, margin: "-150px" }} 
+          viewport={{ once: true, amount: 0.2 }} 
           transition={{ duration: 0.6 }}
         >
           <h3 className="text-2xl md:text-3xl font-orbitron font-bold text-center mb-12">
@@ -120,7 +120,7 @@ const About = () => {
               className="absolute left-4 md:left-1/2 top-0 w-px md:-translate-x-px bg-gradient-to-b from-purple-500 via-fuchsia-500 to-cyan-500"
               initial={{ height: "0%" }}
               whileInView={{ height: "100%" }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
             />
             {timeline.map((item, i) => (
@@ -128,8 +128,8 @@ const About = () => {
                 key={item.year}
                 initial={{ opacity: 0, x: i % 2 === 0 ? -60 : 60 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ delay: 0.2 + i * 0.15, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ delay: i * 0.15, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
                 className={`relative flex items-start gap-6 mb-8 md:mb-12 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
               >
                 {/* Animated dot with glow */}
@@ -137,8 +137,8 @@ const About = () => {
                   className="absolute left-[10px] md:left-1/2 w-5 h-5 rounded-full bg-gradient-to-r from-purple-500 to-fuchsia-500 border-2 border-background md:-translate-x-1/2 z-10 mt-1 shadow-[0_0_20px_rgba(139,31,176,0.6)]"
                   initial={{ scale: 0, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 + i * 0.15, duration: 0.5, type: "spring", stiffness: 300 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ delay: i * 0.15, duration: 0.5, type: "spring", stiffness: 300 }}
                 />
                 {/* Content card */}
                 <motion.div 
