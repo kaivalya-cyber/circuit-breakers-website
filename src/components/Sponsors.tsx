@@ -30,7 +30,7 @@ const Sponsors = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-sm font-medium mb-4">
+          <span className="inline-block px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-4">
             🤝 Partners
           </span>
           <h2 className="text-4xl md:text-6xl font-orbitron font-bold mb-6">
@@ -87,7 +87,7 @@ const Sponsors = () => {
             </p>
             <button
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-amber-900 font-semibold transition-all duration-300 hover:shadow-[0_0_30px_rgba(243,156,18,0.3)]"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-fuchsia-600 hover:from-purple-700 hover:to-fuchsia-700 text-white font-semibold transition-all duration-300 hover:shadow-[0_0_30px_rgba(139,31,176,0.4)]"
             >
               Sponsor Us
               <ExternalLink className="w-4 h-4" />

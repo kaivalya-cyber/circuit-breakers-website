@@ -13,9 +13,9 @@ const seasonData = [
 ];
 
 const winLossData = [
-  { name: "Wins", value: 128, color: "#e74c3c" },
-  { name: "Losses", value: 48, color: "#3498db" },
-  { name: "Ties", value: 4, color: "#f39c12" },
+  { name: "Wins", value: 128, color: "#8b1fb0" },
+  { name: "Losses", value: 48, color: "#c020b0" },
+  { name: "Ties", value: 4, color: "#00bcd4" },
 ];
 
 const CountUp = ({ end, duration = 2, suffix = "" }: { end: number; duration?: number; suffix?: string }) => {
@@ -65,7 +65,7 @@ const Stats = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4">
+          <span className="inline-block px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-4">
             📊 By The Numbers
           </span>
           <h2 className="text-4xl md:text-6xl font-orbitron font-bold mb-6">
@@ -90,7 +90,7 @@ const Stats = () => {
               transition={{ duration: 0.5 }}
             >
               <div className="glass-card p-6 text-center card-hover">
-                <stat.icon className="w-8 h-8 text-red-400 mx-auto mb-3" />
+                <stat.icon className="w-8 h-8 text-purple-400 mx-auto mb-3" />
                 <CountUp end={stat.value} suffix={stat.suffix} />
                 <p className="text-sm text-muted-foreground mt-2">{stat.label}</p>
               </div>
@@ -122,8 +122,8 @@ const Stats = () => {
                       color: "#fff",
                     }}
                   />
-                  <Line type="monotone" dataKey="opr" stroke="#e74c3c" strokeWidth={2} dot={{ fill: "#e74c3c", r: 4 }} name="OPR" />
-                  <Line type="monotone" dataKey="winRate" stroke="#3498db" strokeWidth={2} dot={{ fill: "#3498db", r: 4 }} name="Win Rate %" />
+                  <Line type="monotone" dataKey="opr" stroke="#8b1fb0" strokeWidth={2} dot={{ fill: "#8b1fb0", r: 4 }} name="OPR" />
+                  <Line type="monotone" dataKey="winRate" stroke="#c020b0" strokeWidth={2} dot={{ fill: "#c020b0", r: 4 }} name="Win Rate %" />
                 </LineChart>
               </ResponsiveContainer>
             </div>
@@ -154,8 +154,8 @@ const Stats = () => {
                   <Bar dataKey="highScore" fill="url(#highScoreGradient)" radius={[4, 4, 0, 0]} name="High Score" />
                   <defs>
                     <linearGradient id="highScoreGradient" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#e74c3c" />
-                      <stop offset="100%" stopColor="#f39c12" />
+                      <stop offset="0%" stopColor="#8b1fb0" />
+                      <stop offset="100%" stopColor="#c020b0" />
                     </linearGradient>
                   </defs>
                 </BarChart>
@@ -233,8 +233,8 @@ const Stats = () => {
                   <Bar dataKey="matches" fill="url(#matchesGradient)" radius={[0, 4, 4, 0]} name="Matches" />
                   <defs>
                     <linearGradient id="matchesGradient" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0%" stopColor="#3498db" />
-                      <stop offset="100%" stopColor="#2ecc71" />
+                      <stop offset="0%" stopColor="#8b1fb0" />
+                      <stop offset="100%" stopColor="#00bcd4" />
                     </linearGradient>
                   </defs>
                 </BarChart>
