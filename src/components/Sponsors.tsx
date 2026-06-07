@@ -17,7 +17,7 @@ const sponsors = [
   {
     name: "Play At Learning",
     tier: "Gold",
-    logo: "/sponsors/play-at-learning-logo.svg",
+    logo: "/sponsors/play-at-learning-logo.png",
     description: "Community partner helping us host FTC qualifiers, manage field setup, and run events.",
   },
   {
@@ -35,7 +35,7 @@ const sponsors = [
   {
     name: "SLAC",
     tier: "Silver",
-    logo: "/sponsors/slac-logo.svg",
+    logo: "/sponsors/slac-logo.png",
     description: "Stanford's National Accelerator Lab — CAD expert Chethana Gowda taught Fusion360 and design principles.",
   },
   {
